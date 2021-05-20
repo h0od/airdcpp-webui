@@ -26,6 +26,7 @@
     "lint": "tslint --project tsconfig.json",
     "lint-fix": "tslint --project tsconfig.json --fix",
     "start": "node devtools/server.js",
+    "start-h0od": "node devtools/server.js --apiSecure true --apiHost mathias.lubera.net/airdcpp/",
     "build-webpack": "cross-env NODE_ENV=production webpack --mode production --progress",
     "build": "npm run clean && npm run build-webpack",
     "build-debug": "npm run clean && webpack --progress",

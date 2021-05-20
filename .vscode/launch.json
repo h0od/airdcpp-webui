@@ -27,6 +27,17 @@
       "internalConsoleOptions": "neverOpen"
     }, {
 
+    }, 
+    {
+      "type": "pwa-chrome",
+      "name": "Launch in Chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      
     }
 	]
 }

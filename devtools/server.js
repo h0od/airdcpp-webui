@@ -51,7 +51,11 @@ const app = express();
 
 // Set proxy
 const proxy = new httpProxy.createProxyServer({
-  target: (argv.apiSecure ? 'https://' : 'http://') + argv.apiHost
+  target: (argv.apiSecure ? 'https://' : 'http://') + argv.apiHost,
+  secure: false,
+  xfwd: true,
+  changeOrigin: true,
+  ws: true,
 });
 
 proxy.on('error', (err, req, res) => {
