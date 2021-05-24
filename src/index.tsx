@@ -6,15 +6,15 @@ import App from './App';
 
 
 // Wrapper for hot reloading
-//import { hot } from 'react-hot-loader';
+import { hot } from 'react-hot-loader';
 
-//const HMRApp = hot(module)(App);
+const HMRApp = hot(module)(App);
 
-//ReactDOM.render(<HMRApp/>, document.getElementById('container-main'));
+ReactDOM.render(<HMRApp/>, document.getElementById('container-main'));
 
 
 
-ReactDOM.render(<App/>, document.getElementById('container-main'));
+//ReactDOM.render(<App/>, document.getElementById('container-main'));
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
@@ -24,7 +24,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-/*const render = (Component: React.ComponentType) => {
+const render = (Component: React.ComponentType) => {
   ReactDOM.render(<Component/>, document.getElementById('container-main'));
 };
 
@@ -34,4 +34,4 @@ if ((module as any).hot) {
   (module as any).hot.accept('./App', () => { 
     render(App);
   });
-}*/
+}

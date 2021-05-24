@@ -92,6 +92,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
   historyApiFallback: true,
   logLevel: 'warn',
   publicPath: config.output.publicPath,
+  hot: true,
   watchOptions: {
     ignored: /resources\/locales\/[a-z]{2}\/.*\.missing\.json/,
   }
